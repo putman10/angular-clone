@@ -34,6 +34,7 @@ sort by category
 Trending news stories based on popularity property
 Recent news stories based on date published
 Social Media Posting of each article
+Full CRUD functionality
 
 
 
