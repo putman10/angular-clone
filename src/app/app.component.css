@@ -2,7 +2,8 @@ img {
   max-width: 100%;
 }
 
-#editForm{
+#editForm,
+#newArticleForm{
     border: 1px solid black;
     padding: 20px;
     margin-top: 2rem;

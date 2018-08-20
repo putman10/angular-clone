@@ -50,4 +50,8 @@ export class AppComponent {
   createNewArticle(){
     this.newArticle = "new";
   }
+
+  deleteArticle(selectedArticle){
+
+  }
 }
