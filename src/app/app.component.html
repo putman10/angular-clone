@@ -1,16 +1,29 @@
 <div style="text-align:center">
   <h1>
-    Welcome to {{ title }}!
+    Welcome to {{ webTitle }}!
   </h1>
 </div>
 <div class="container">
-  <div class="col-md-4" *ngFor="let article of articles">
-    <hr>
-    <p>{{article.category}}</p>
-    <p>{{article.publishedDate}}</p>
-    <h3>{{article.title}}</h3>
-    <h5><em>{{article.subtitle}}</em></h5>
-    <p><img src="{{article.image}}" alt="{{article.title}}"></p>
-    <p [innerHTML]="article.bodyText"></p>
+  <div class="row">
+    <div class="col-md-4" *ngFor="let article of articles">
+      <hr>
+      <p><b>{{article.category}}</b></p>
+      <p>{{article.publishedDate}}</p>
+      <h3>{{article.title}}</h3>
+      <h5><em>{{article.subtitle}}</em></h5>
+      <p><img src="{{article.image}}" alt="{{article.title}}"></p>
+      <p [innerHTML]="article.bodyText"></p>
+      <button (click)='editArticle(article)' type="button" name="editArticle" class="btn btn-danger">Edit Article</button>
+    </div>
   </div>
+
+  <div class="form" *ngIf="selectedArticle">
+    <h2>{{selectedArticle.title}}</h2>
+    <form class="editForm">
+      <div class="form-group">
+        <label for="title">Edit Title:</label>
+        <input type="text" name="title" class="form-control" [(ngModel)]="selectedArticle.subtitle">
+      </div>
+      <button type="button" name="button" (click)="finishedEditing()" class="btn btn-warning">Done Updating</button>
+    </form>
 </div>

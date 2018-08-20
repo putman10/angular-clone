@@ -7,7 +7,7 @@ import { Article } from './models/article.model'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'The Huffington Post';
+  webTitle = 'The Huffington Post';
   articles: Article[] = [
     new Article (
       'Nun’s First Pitch At MLB Game Is Devilishly Good',
@@ -28,4 +28,14 @@ export class AppComponent {
       '08/20/2018 03:03 am ET'
     )
   ]
+
+  selectedArticle = null;
+
+  finishedEditing() {
+  this.selectedArticle = null;
+  }
+
+  editArticle(currentArticle){
+    this.selectedArticle = currentArticle;
+  }
 }
