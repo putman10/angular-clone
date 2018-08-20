@@ -17,8 +17,8 @@
     </div>
   </div>
 
-  <div class="form" *ngIf="selectedArticle">
-    <h2>{{selectedArticle.title}}</h2>
+  <div class="form" id="editForm" *ngIf="selectedArticle">
+    <h2><span class="bold">Edit:</span> {{selectedArticle.title}}</h2>
     <form class="editForm">
       <div class="form-group">
         <label for="title">Edit Title:</label>

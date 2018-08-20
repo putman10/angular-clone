@@ -1,0 +1,33 @@
+<div class="form" *ngIf="selectedArticle">
+  <h2>{{selectedArticle.title}}</h2>
+  <form class="editForm">
+    <div class="form-group">
+      <label for="title">Edit Title:</label>
+      <input type="text" name="title" class="form-control" [(ngModel)]="selectedArticle.title">
+    </div>
+    <div class="form-group">
+      <label for="subtitle">Edit Sub-Title:</label>
+      <input type="text" name="subtitle" class="form-control" [(ngModel)]="selectedArticle.subtitle">
+    </div>
+    <div class="form-group">
+      <label for="author">Edit Author:</label>
+      <input type="text" name="author" class="form-control" [(ngModel)]="selectedArticle.author">
+    </div>
+    <div class="form-group">
+      <label for="image">Edit Image Source:</label>
+      <input type="text" name="image" class="form-control" [(ngModel)]="selectedArticle.image">
+    </div>
+    <div class="form-group">
+      <label for="bodyText">Edit Body Text:</label>
+      <textarea class="form-control" rows="5" id="bodyText" [(ngModel)]="selectedArticle.bodyText" >{{selectedArticle.bodyText}}</textarea>
+    </div>
+    <div class="form-group">
+      <label for="category">Edit Category:</label>
+      <input type="text" name="category" class="form-control" [(ngModel)]="selectedArticle.category">
+    </div>
+    <div class="form-group">
+      <label for="publishedDate">Edit Published Date:</label>
+      <input type="text" name="publishedDate" class="form-control" [(ngModel)]="selectedArticle.publishedDate">
+    </div>
+    <button type="button" name="button" (click)="finishedEditing()" class="btn btn-warning">Done Updating</button>
+  </form>
