@@ -38,4 +38,16 @@ export class AppComponent {
   editArticle(currentArticle){
     this.selectedArticle = currentArticle;
   }
+
+  newArticle = null;
+
+  addNew(title: string, subtitle: string, author: string, image: string, bodyText: string, category: string, publishedDate: string) {
+  let newArticleObject =  new Article (title, subtitle, author, image, bodyText, category, publishedDate);
+  this.articles.push(newArticleObject);
+  this.newArticle = null;
+  }
+
+  createNewArticle(){
+    this.newArticle = "new";
+  }
 }
