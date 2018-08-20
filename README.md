@@ -14,6 +14,7 @@ title
 subtitle
 author
 image
+bodyText
 category
 publishedDate
 
@@ -32,6 +33,7 @@ Articles display on page with shortened Description
 sort by category
 Trending news stories based on popularity property
 Recent news stories based on date published
+Social Media Posting of each article
 
 
 
