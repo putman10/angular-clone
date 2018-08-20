@@ -9,41 +9,41 @@
 * _The application will recreate the look and core functionality of The Huffington Post_<br>
 * _Core Functionality is the display of news articles._<br>
 
-Important properties for main constructor:
-title
-subtitle
-author
-image
-bodyText
-category
-publishedDate
+## Important properties for main constructor:
+* _title_
+* _subtitle_
+* _author_
+* _image_
+* _bodyText_
+* _category_
+* _publishedDate_
 
-Huffington Post Color Scheme:
-Turquoise- #0dbe98
-Black- #000000
-Pink- #F83371
-White- White
+## Huffington Post Color Scheme:
+* _Turquoise- #0dbe98_
+* _Black- #000000_
+* _Pink- #F83371_
+* _White- White_
 
-Font Family: "ProximaNovaCond-Bold", "Helvetica Neue", "Helvetica", Roboto, Arial, sans-serif
+* _Font Family: "ProximaNovaCond-Bold", "Helvetica Neue", "Helvetica", Roboto, Arial, sans-serif_
 
-MVC:
-Display articles by categories
-Accompanying images with articles.
-Articles display on page with shortened Description
-sort by category
-Trending news stories based on popularity property
-Recent news stories based on date published
-Social Media Posting of each article
-Full CRUD functionality
+## MVC:
+* _Display articles by categories_
+* _Accompanying images with articles._
+* _Articles display on page with shortened Description_
+* _sort by category_
+* _Trending news stories based on popularity property_
+* _Recent news stories based on date published_
+* _Social Media Posting of each article
+* _Full CRUD functionality_
 
 
 
-Additional Functionality:
-  Home page Slide show
-  Submission form for newsletter signup
-  Fixed header with social media and responsive sizing.
-  Google Translate for entire page.
-  Option to select or remove categories of Articles
+## Additional Functionality:
+  * _Home page Slide show_
+  * _Submission form for newsletter signup_
+  * _Fixed header with social media and responsive sizing._
+  * _Google Translate for entire page._
+  * _Option to select or remove categories of Articles_
 
 
 ## Setup/Installation Requirements
