@@ -9,6 +9,22 @@
 * _The application will recreate the look and core functionality of The Huffington Post_<br>
 * _Core Functionality is the display of news articles._<br>
 
+Important properties for main constructor:
+title
+subtitle
+author
+image
+category
+publishedDate
+
+Huffington Post Color Scheme:
+Turquoise- #0dbe98
+Black- #000000
+Pink- #F83371
+White- White
+
+Font Family: "ProximaNovaCond-Bold", "Helvetica Neue", "Helvetica", Roboto, Arial, sans-serif
+
 MVC:
 Display articles by categories
 Accompanying images with articles.
