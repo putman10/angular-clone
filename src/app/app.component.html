@@ -1,7 +1,14 @@
-<!--The content below is only a placeholder and can be replaced.-->
+<div id="header">
+  <div class="container" >
+  <h1>{{webTitle}}</h1>
+  <div class="navbar">
+    <ul>
+      <li><a routerLink="">Home</a></li>
+      <li><a routerLink="admin">Admin  Section</a></li>
+    </ul>
+  </div>
+  </div>
+</div>
 <div class="container">
-  <h1>
-    Welcome to {{ webTitle }}!
-  </h1>
-    <router-outlet></router-outlet>
+  <router-outlet></router-outlet>
 </div>
