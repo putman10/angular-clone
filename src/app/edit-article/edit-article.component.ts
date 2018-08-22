@@ -24,15 +24,21 @@ export class EditArticleComponent implements OnInit {
     this.article = this.articleService.getArticleById(this.articleId)
   }
 
-  saveArticle(name: string) {
+  saveArticle(title: string, subtitle: string, author: string, image: string, bodyText: string, category: string, publishedDate: string) {
     let articleInFirebase = this.articleService.getArticleById(this.articleId);
     articleInFirebase.update({
-      name: name,
+      title: title,
+      subtitle: subtitle,
+      author: author,
+      image: image,
+      bodyText: bodyText,
+      category: category,
+      publishedDate: publishedDate
     });
     this.router.navigate(['admin']);
   }
 
-  deleteUser() {
+  deleteArticle() {
     let articleInFirebase = this.articleService.getArticleById(this.articleId);
     articleInFirebase.remove();
     this.router.navigate(['admin']);

@@ -6,8 +6,8 @@
       <p>{{article.publishedDate}}</p>
       <h3>{{article.title}}</h3>
       <h5><em>{{article.subtitle}}</em></h5>
+      <p><em>by {{article.author}}</em></p>
       <p><img src="{{article.image}}" alt="{{article.title}}"></p>
       <p [innerHTML]="article.bodyText"></p>
-      <!-- <button (click)='editArticle(article)' type="button" name="editArticle" class="btn btn-danger">Edit Article</button> -->
     </div>
   </div>

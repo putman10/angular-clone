@@ -3,33 +3,33 @@
   <form class="editForm">
     <div class="form-group">
       <label for="title">Edit Title:</label>
-      <input type="text" name="title" class="form-control" value="{{(article | async)?.title}}">
+      <input type="text" name="title" class="form-control" value="{{(article | async)?.title}}" #title>
     </div>
     <div class="form-group">
       <label for="subtitle">Edit Sub-Title:</label>
-      <input type="text" name="subtitle" class="form-control" value="{{(article | async)?.subtitle}}">
+      <input type="text" name="subtitle" class="form-control" value="{{(article | async)?.subtitle}}" #subtitle>
     </div>
     <div class="form-group">
       <label for="author">Edit Author:</label>
-      <input type="text" name="author" class="form-control" value="{{(article | async)?.author}}">
+      <input type="text" name="author" class="form-control" value="{{(article | async)?.author}}" #author>
     </div>
     <div class="form-group">
       <label for="image">Edit Image Source:</label>
-      <input type="text" name="image" class="form-control" value="{{(article | async)?.image}}">
+      <input type="text" name="image" class="form-control" value="{{(article | async)?.image}}" #image>
     </div>
     <div class="form-group">
       <label for="bodyText">Edit Body Text:</label>
-      <textarea class="form-control" rows="5" id="bodyText" value="{{(article | async)?.bodyText}}" >{{(article | async)?.bodyText}}</textarea>
+      <textarea class="form-control" rows="5" id="bodyText" value="{{(article | async)?.bodyText}}" #bodyText>{{(article | async)?.bodyText}}</textarea>
     </div>
     <div class="form-group">
       <label for="category">Edit Category:</label>
-      <input type="text" name="category" class="form-control" value="{{(article | async)?.category}}">
+      <input type="text" name="category" class="form-control" value="{{(article | async)?.category}}" #category>
     </div>
     <div class="form-group">
       <label for="publishedDate">Edit Published Date:</label>
-      <input type="text" name="publishedDate" class="form-control" value="{{(article | async)?.publishedDate}}">
+      <input type="text" name="publishedDate" class="form-control" value="{{(article | async)?.publishedDate}}" #publishedDate>
     </div>
-    <button type="button" name="button" (click)="finishedEditing()" class="btn btn-warning">Done Updating</button>
+    <button type="button" name="button" (click)="saveArticle(title.value, subtitle.value, author.value, image.value, bodyText.value, category.value, publishedDate.value)" class="btn btn-warning">Done Updating</button>
     <button type="button" name="deleteButton" (click)="deleteArticle(selectedArticle)" class="btn btn-danger">Delete Article</button>
   </form>
 </div>
