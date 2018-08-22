@@ -1,36 +1,35 @@
 <h3>Editing <strong>{{(article | async)?.title}}</strong></h3>
-<!-- <div class="form" id="editForm" *ngIf="selectedArticle">
-  <h2><span class="bold">Edit:</span> {{selectedArticle.title}}</h2>
+<div class="form" id="editForm">
   <form class="editForm">
     <div class="form-group">
       <label for="title">Edit Title:</label>
-      <input type="text" name="title" class="form-control" [(ngModel)]="selectedArticle.title">
+      <input type="text" name="title" class="form-control" value="{{(article | async)?.title}}">
     </div>
     <div class="form-group">
       <label for="subtitle">Edit Sub-Title:</label>
-      <input type="text" name="subtitle" class="form-control" [(ngModel)]="selectedArticle.subtitle">
+      <input type="text" name="subtitle" class="form-control" value="{{(article | async)?.subtitle}}">
     </div>
     <div class="form-group">
       <label for="author">Edit Author:</label>
-      <input type="text" name="author" class="form-control" [(ngModel)]="selectedArticle.author">
+      <input type="text" name="author" class="form-control" value="{{(article | async)?.author}}">
     </div>
     <div class="form-group">
       <label for="image">Edit Image Source:</label>
-      <input type="text" name="image" class="form-control" [(ngModel)]="selectedArticle.image">
+      <input type="text" name="image" class="form-control" value="{{(article | async)?.image}}">
     </div>
     <div class="form-group">
       <label for="bodyText">Edit Body Text:</label>
-      <textarea class="form-control" rows="5" id="bodyText" [(ngModel)]="selectedArticle.bodyText" >{{selectedArticle.bodyText}}</textarea>
+      <textarea class="form-control" rows="5" id="bodyText" value="{{(article | async)?.bodyText}}" >{{(article | async)?.bodyText}}</textarea>
     </div>
     <div class="form-group">
       <label for="category">Edit Category:</label>
-      <input type="text" name="category" class="form-control" [(ngModel)]="selectedArticle.category">
+      <input type="text" name="category" class="form-control" value="{{(article | async)?.category}}">
     </div>
     <div class="form-group">
       <label for="publishedDate">Edit Published Date:</label>
-      <input type="text" name="publishedDate" class="form-control" [(ngModel)]="selectedArticle.publishedDate">
+      <input type="text" name="publishedDate" class="form-control" value="{{(article | async)?.publishedDate}}">
     </div>
     <button type="button" name="button" (click)="finishedEditing()" class="btn btn-warning">Done Updating</button>
     <button type="button" name="deleteButton" (click)="deleteArticle(selectedArticle)" class="btn btn-danger">Delete Article</button>
   </form>
-</div> -->
+</div>
