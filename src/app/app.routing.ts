@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { AdminComponent } from './admin/admin.component';
 import { EditArticleComponent } from './edit-article/edit-article.component';
 import { NewArticleComponent } from './new-article/new-article.component';
+import { ArticleDetailsComponent } from './article-details/article-details.component';
 
 
 const appRoutes: Routes = [
@@ -14,6 +15,10 @@ const appRoutes: Routes = [
    {
       path: 'admin',
       component: AdminComponent
+    },
+   {
+      path: 'articles/:id',
+      component: ArticleDetailsComponent
     },
    {
       path: 'articles/:id/edit',

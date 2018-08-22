@@ -1,0 +1,11 @@
+<div class="container">
+  <div>
+    <p><b>{{(article | async)?.category}}</b></p>
+    <p>{{(article | async)?.publishedDate}}</p>
+    <h3>{{(article | async)?.title}}</h3>
+    <h5><em>{{(article | async)?.subtitle}}</em></h5>
+    <p><em>by {{(article | async)?.author}}</em></p>
+    <p><img src="{{(article | async)?.image}}" alt="{{(article | async)?.title}}"></p>
+    <p [innerHTML]="(article | async)?.bodyText"></p>
+    </div>
+  </div>

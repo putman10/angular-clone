@@ -21,4 +21,8 @@ export class HomeComponent implements OnInit {
     this.articles = this.articleService.getArticles();
   }
 
+  viewArticle(currentArticle){
+    this.router.navigate(['articles', currentArticle.$key])
+  }
+
 }
