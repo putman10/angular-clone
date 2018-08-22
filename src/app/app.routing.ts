@@ -17,17 +17,17 @@ const appRoutes: Routes = [
       component: AdminComponent
     },
    {
-      path: 'articles/:id',
-      component: ArticleDetailsComponent
-    },
-   {
       path: 'articles/:id/edit',
       component: EditArticleComponent
     },
    {
       path: 'articles/new',
       component: NewArticleComponent
-    }
+    },
+     {
+        path: 'articles/:id',
+        component: ArticleDetailsComponent
+      }
  ];
 
  export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
