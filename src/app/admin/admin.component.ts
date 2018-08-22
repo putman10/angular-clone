@@ -25,4 +25,10 @@ export class AdminComponent implements OnInit {
     this.router.navigate(['articles', currentArticle.$key, 'edit'])
   }
 
+  deleteArticle(currentArticle) {
+    let articleInFirebase = this.articleService.getArticleById(currentArticle.$key);
+    articleInFirebase.remove();
+    this.router.navigate(['admin']);
+  }
+
 }
