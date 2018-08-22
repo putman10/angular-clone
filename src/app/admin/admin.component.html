@@ -1,3 +1,18 @@
-<p>
-  admin works!
-</p>
+<div class="container">
+  <div class="row">
+    <div class="row" *ngFor="let article of articles | async">
+      <div class="col-md-5">
+        <p><b>{{article.title}}</b></p>
+      </div>
+      <div class="col-md-2">
+        <p>{{article.publishedDate}}</p>
+      </div>
+      <div class="col-md-1">
+        <p><b>{{article.category}}</b></p>
+      </div>
+      <div class="col-md-4">
+        <button (click)='editArticle(article)' type="button" name="editArticle" class="btn btn-danger">Edit Article</button>
+        <button (click)='editArticle(article)' type="button" name="editArticle" class="btn btn-danger">Delete Article</button>
+      </div>
+    </div>
+  </div>
