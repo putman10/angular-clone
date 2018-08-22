@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { AdminComponent } from './admin/admin.component';
 import { EditArticleComponent } from './edit-article/edit-article.component';
+import { NewArticleComponent } from './new-article/new-article.component';
 
 
 const appRoutes: Routes = [
@@ -17,6 +18,10 @@ const appRoutes: Routes = [
    {
       path: 'articles/:id/edit',
       component: EditArticleComponent
+    },
+   {
+      path: 'articles/new',
+      component: NewArticleComponent
     }
  ];
 

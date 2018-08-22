@@ -31,4 +31,8 @@ export class AdminComponent implements OnInit {
     this.router.navigate(['admin']);
   }
 
+  addNewArticle(){
+    this.router.navigate(['articles/new']);
+  }
+
 }

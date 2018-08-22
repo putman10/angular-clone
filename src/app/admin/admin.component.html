@@ -1,5 +1,6 @@
 <div class="container">
-  <div class="row">
+  <div>
+    <button class="btn btn-primary" type="button" name="addNew" (click)="addNewArticle()">Add New Article</button>
     <div class="row" id="all-articles" *ngFor="let article of articles | async">
       <div class="col-md-5">
         <p><b>{{article.title}}</b></p>

@@ -14,6 +14,7 @@ import { EditFormComponent } from './edit-form/edit-form.component';
 import { HomeComponent } from './home/home.component';
 import { AdminComponent } from './admin/admin.component';
 import { EditArticleComponent } from './edit-article/edit-article.component';
+import { NewArticleComponent } from './new-article/new-article.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -28,7 +29,8 @@ export const firebaseConfig = {
     EditFormComponent,
     HomeComponent,
     AdminComponent,
-    EditArticleComponent
+    EditArticleComponent,
+    NewArticleComponent
   ],
   imports: [
     BrowserModule,
