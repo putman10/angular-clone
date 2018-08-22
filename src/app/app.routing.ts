@@ -2,6 +2,7 @@ import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { AdminComponent } from './admin/admin.component';
+import { EditArticleComponent } from './edit-article/edit-article.component';
 
 
 const appRoutes: Routes = [
@@ -12,6 +13,10 @@ const appRoutes: Routes = [
    {
       path: 'admin',
       component: AdminComponent
+    },
+   {
+      path: 'articles/:id/edit',
+      component: EditArticleComponent
     }
  ];
 

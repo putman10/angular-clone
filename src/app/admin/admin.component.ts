@@ -21,4 +21,8 @@ export class AdminComponent implements OnInit {
     this.articles = this.articleService.getArticles();
   }
 
+  editArticle(currentArticle){
+    this.router.navigate(['articles', currentArticle.$key, 'edit'])
+  }
+
 }

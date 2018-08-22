@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="row" *ngFor="let article of articles | async">
+    <div class="row" id="all-articles" *ngFor="let article of articles | async">
       <div class="col-md-5">
         <p><b>{{article.title}}</b></p>
       </div>
@@ -11,8 +11,10 @@
         <p><b>{{article.category}}</b></p>
       </div>
       <div class="col-md-4">
-        <button (click)='editArticle(article)' type="button" name="editArticle" class="btn btn-danger">Edit Article</button>
-        <button (click)='editArticle(article)' type="button" name="editArticle" class="btn btn-danger">Delete Article</button>
+        <p>
+          <button (click)='editArticle(article)' type="button" id="editArticle" name="editArticle" class="btn btn-danger">Edit Article</button>
+          <button (click)='editArticle(article)' type="button" name="editArticle" class="btn btn-danger">Delete Article</button>
+        </p>
       </div>
     </div>
   </div>
