@@ -1,10 +1,13 @@
-<p>
-  home works!
-</p>
-<!-- <h2>Marketplace</h2>
-
-<div *ngFor="let album of albums | async" (click)="goToDetailPage(album)" class="panel panel-default">
-  <div class="panel-body">
-    <h3><em>{{album.title}}</em> by {{album.artist}}</h3>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4" *ngFor="let article of articles | async">
+      <hr>
+      <p><b>{{article.category}}</b></p>
+      <p>{{article.publishedDate}}</p>
+      <h3>{{article.title}}</h3>
+      <h5><em>{{article.subtitle}}</em></h5>
+      <p><img src="{{article.image}}" alt="{{article.title}}"></p>
+      <p [innerHTML]="article.bodyText"></p>
+      <!-- <button (click)='editArticle(article)' type="button" name="editArticle" class="btn btn-danger">Edit Article</button> -->
+    </div>
   </div>
-</div> -->

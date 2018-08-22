@@ -1,14 +1,1 @@
-img {
-  max-width: 100%;
-}
 
-#editForm,
-#newArticleForm{
-    border: 1px solid black;
-    padding: 20px;
-    margin-top: 2rem;
-}
-
-.bold {
-    font-weight: 700;
-}
