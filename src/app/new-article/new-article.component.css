@@ -1,3 +1,7 @@
 label {
   font-weight: 700;
 }
+
+#newArticleForm {
+  margin-top: 3rem;
+}

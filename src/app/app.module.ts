@@ -6,6 +6,7 @@ import { routing } from './app.routing';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import {SlideshowModule} from 'ng-simple-slideshow';
 
 
 
@@ -41,6 +42,7 @@ export const firebaseConfig = {
     FormsModule,
     HttpModule,
     routing,
+    SlideshowModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule
   ],
