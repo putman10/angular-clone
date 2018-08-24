@@ -42,19 +42,20 @@ export class SlideshowBannerComponent implements OnInit {
 
   ngOnInit() {
     let bannersInDatabase;
+
+    let imageString = this.imageUrls;
     this.articleService.getArticles().subscribe(dataLastEmittedFromObserver => {
       bannersInDatabase = dataLastEmittedFromObserver;
       bannersInDatabase.forEach(function(banner){
-        if(banner.tags === "banner"){
-console.log("yes");
-} else {
-  console.log("no")
-}
-
+        if(banner.tags[0] === "Banner" || banner.tags[0] === "banner"){
+          imageString.push({ url: banner.image, clickAction: () => alert('custom click function'), caption: banner.subtitle });
+        } else {
+        }
       })
-
     });
-
+    this.imageUrls = imageString;
+    console.log(imageString);
+    console.log(this.imageUrls);
   }
 
 
