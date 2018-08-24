@@ -23,4 +23,8 @@ export class ArticleService {
     this.articles.push(newArticle);
   }
 
+  // getBanner (){
+  //   return this.database.object('funds/' + fundId + '/levels/' + index)
+  // }
+
 }

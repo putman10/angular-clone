@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { ArticleService } from '../article.service';
+import { FirebaseListObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'app-slideshow-banner',
@@ -15,6 +16,7 @@ export class SlideshowBannerComponent implements OnInit {
   imageUrls = [
     { url: 'https://cdn.vox-cdn.com/uploads/chorus_asset/file/9278671/jbareham_170917_2000_0124.jpg', clickAction: () => alert('custom click function'), caption: 'Test Caption' }
   ];
+
   height: string = '400px';
   minHeight: string;
   arrowSize: string = '30px';
@@ -35,13 +37,13 @@ export class SlideshowBannerComponent implements OnInit {
   lazyLoad: boolean = false;
   width: string = '100%';
 
-  constructor(private articleService: ArticleService) { }
+  constructor(private router: Router, private articleService: ArticleService, private route: ActivatedRoute, private location: Location) { }
 
   ngOnInit() {
     let bannersInDatabase;
     this.articleService.getArticles().subscribe(dataLastEmittedFromObserver => {
-      bannersInDatabase = dataLastEmittedFromObserver;
+      bannersInDatabase = dataLastEmittedFromObserver;  
     });
-    console.log(bannersInDatabase)
+
   }
 }
