@@ -29,6 +29,16 @@
       <label for="publishedDate">Edit Published Date:</label>
       <input type="text" name="publishedDate" class="form-control" value="{{(article | async)?.publishedDate}}" #publishedDate>
     </div>
+    <div class="form-group">
+      <label>Edit Tags</label>
+      <ul>
+        <li *ngFor="let tag of tempTagArray">
+          <p>{{tag}}<button class="btn btn-danger tagDelete" (click)="deleteTag(tag)">X</button></p>
+        </li>
+      </ul>
+      <input type="text" class="form-control" #tag>
+      <button (click)="addTag(tag.value); tag.value = ''" class="btn btn-info tagAdd" id="add-tag">Add New Tag</button>
+    </div>
     <button type="button" name="button" (click)="saveArticle(title.value, subtitle.value, author.value, image.value, bodyText.value, category.value, publishedDate.value)" class="btn btn-warning">Done Updating</button>
     <button type="button" name="deleteButton" (click)="deleteArticle(selectedArticle)" class="btn btn-danger">Delete Article</button>
   </form>

@@ -15,13 +15,17 @@ import { FirebaseListObservable } from 'angularfire2/database';
 export class EditArticleComponent implements OnInit {
   articleId: string = null;
   article;
+  tempTagArray = [];
 
   constructor(private router: Router, private route: ActivatedRoute, private location: Location, private articleService: ArticleService) { }
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
       this.articleId = urlParameters['id'];
     });
-    this.article = this.articleService.getArticleById(this.articleId)
+    this.article = this.articleService.getArticleById(this.articleId);
+    this.article.subscribe(dataLastEmittedFromObserver => {
+      this.tempTagArray = dataLastEmittedFromObserver.tags;
+    });
   }
 
   saveArticle(title: string, subtitle: string, author: string, image: string, bodyText: string, category: string, publishedDate: string) {
@@ -33,7 +37,8 @@ export class EditArticleComponent implements OnInit {
       image: image,
       bodyText: bodyText,
       category: category,
-      publishedDate: publishedDate
+      publishedDate: publishedDate,
+      tags: this.tempTagArray
     });
     this.router.navigate(['admin']);
   }
@@ -42,6 +47,15 @@ export class EditArticleComponent implements OnInit {
     let articleInFirebase = this.articleService.getArticleById(this.articleId);
     articleInFirebase.remove();
     this.router.navigate(['admin']);
+  }
+
+  deleteTag(tag) {
+    let index = this.tempTagArray.indexOf(tag);
+    this.tempTagArray.splice(index, 1);
+  }
+
+  addTag(tag:string){
+  this.tempTagArray.push(tag);
   }
 
 }
