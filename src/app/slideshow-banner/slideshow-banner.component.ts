@@ -14,7 +14,6 @@ import { FirebaseListObservable } from 'angularfire2/database';
 export class SlideshowBannerComponent implements OnInit {
 
   imageUrls = [
-    { url: 'https://cdn.vox-cdn.com/uploads/chorus_asset/file/9278671/jbareham_170917_2000_0124.jpg', clickAction: () => alert('custom click function'), caption: 'Test Caption' }
   ];
 
   height: string = '400px';
@@ -46,16 +45,16 @@ export class SlideshowBannerComponent implements OnInit {
     let imageString = this.imageUrls;
     this.articleService.getArticles().subscribe(dataLastEmittedFromObserver => {
       bannersInDatabase = dataLastEmittedFromObserver;
-      bannersInDatabase.forEach(function(banner){
-        if(banner.tags[0] === "Banner" || banner.tags[0] === "banner"){
-          imageString.push({ url: banner.image, clickAction: () => alert('custom click function'), caption: banner.subtitle });
-        } else {
-        }
-      })
+      for(let x = 0; x <= bannersInDatabase.length; x++){
+        bannersInDatabase.forEach(function(banner){
+          if(banner.tags[x] === "Banner" || banner.tags[x] === "banner"){
+            imageString.push({ url: banner.image, clickAction: () => alert('custom click function'), caption: banner.subtitle });
+          } else {
+          }
+        });
+      }
     });
     this.imageUrls = imageString;
-    console.log(imageString);
-    console.log(this.imageUrls);
   }
 
 
