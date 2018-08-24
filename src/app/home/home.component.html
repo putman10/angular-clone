@@ -1,13 +1,22 @@
 <app-slideshow-banner></app-slideshow-banner>
 <div class="container">
   <div class="row">
-    <div class="col-md-4" *ngFor="let article of articles | async">
-      <div (click)="viewArticle(article)">
-        <hr>
-        <p><b>{{article.category}}</b></p>
-        <p>{{article.publishedDate}}</p>
-        <h3>{{article.title}}</h3>
-        <p><img src="{{article.image}}" alt="{{article.title}}"></p>
+    <div class="col-md-3">
+      <p>test left</p>
+    </div>
+    <div class="col-md-6">
+      <div class="row">
+        <div class="col-md-12 middleArticles" *ngFor="let article of articles | async | Limit2Pipe">
+          <div (click)="viewArticle(article)">
+            <p><img src="{{article.image}}" alt="{{article.title}}"></p>
+            <h2 class="title">{{article.title}}</h2>
+            <p>{{article.subtitle}}</p>
+            <p class="author">by {{article.author}}</p>
+          </div>
+        </div>
       </div>
+    </div>
+    <div class="col-md-3">
+      <p>test right</p>
     </div>
   </div>

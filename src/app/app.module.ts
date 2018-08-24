@@ -18,6 +18,7 @@ import { NewArticleComponent } from './new-article/new-article.component';
 import { ArticleDetailsComponent } from './article-details/article-details.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { SlideshowBannerComponent } from './slideshow-banner/slideshow-banner.component';
+import { Limit2Pipe } from './limit2.pipe';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -35,7 +36,8 @@ export const firebaseConfig = {
     NewArticleComponent,
     ArticleDetailsComponent,
     NavBarComponent,
-    SlideshowBannerComponent
+    SlideshowBannerComponent,
+    Limit2Pipe
   ],
   imports: [
     BrowserModule,

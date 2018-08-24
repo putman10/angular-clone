@@ -16,3 +16,22 @@ img {
 img {
     max-width: 100%;
 }
+
+.author {
+    color: #F83371;
+    font-size: 0.8125rem;
+    line-height: 0.9375rem;
+    font-weight: normal;
+}
+
+.middleArticles:first-of-type {
+  margin-top: 1.5rem ;
+}
+
+.middleArticles {
+  margin-bottom: 1.5rem ;
+}
+
+.title {
+  font-weight:700;
+}
