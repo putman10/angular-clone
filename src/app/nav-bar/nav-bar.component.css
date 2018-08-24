@@ -1,6 +1,10 @@
 #header {
-  background-color: black;
-  text-align: center;
+    background-color: black;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
 }
 
 #hamburger{
