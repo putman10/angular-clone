@@ -2,16 +2,18 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
+import { ArticleService } from '../article.service';
 
 @Component({
   selector: 'app-slideshow-banner',
   templateUrl: './slideshow-banner.component.html',
-  styleUrls: ['./slideshow-banner.component.css']
+  styleUrls: ['./slideshow-banner.component.css'],
+  providers: [ ArticleService ]
 })
 export class SlideshowBannerComponent implements OnInit {
 
   imageUrls = [
-    { url: 'https://cdn.vox-cdn.com/uploads/chorus_asset/file/9278671/jbareham_170917_2000_0124.jpg', clickAction: () => goToArticle(), caption: 'Test Caption' }
+    { url: 'https://cdn.vox-cdn.com/uploads/chorus_asset/file/9278671/jbareham_170917_2000_0124.jpg', clickAction: () => alert('custom click function'), caption: 'Test Caption' }
   ];
   height: string = '400px';
   minHeight: string;
@@ -33,13 +35,13 @@ export class SlideshowBannerComponent implements OnInit {
   lazyLoad: boolean = false;
   width: string = '100%';
 
-  constructor() { }
+  constructor(private articleService: ArticleService) { }
 
   ngOnInit() {
+    let bannersInDatabase;
+    this.articleService.getArticles().subscribe(dataLastEmittedFromObserver => {
+      bannersInDatabase = dataLastEmittedFromObserver;
+    });
+    console.log(bannersInDatabase)
   }
-
-  goToArticle(){
-    console.log("hello")
-  }
-
 }
