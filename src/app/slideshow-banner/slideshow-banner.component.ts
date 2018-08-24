@@ -37,13 +37,25 @@ export class SlideshowBannerComponent implements OnInit {
   lazyLoad: boolean = false;
   width: string = '100%';
 
+
   constructor(private router: Router, private articleService: ArticleService, private route: ActivatedRoute, private location: Location) { }
 
   ngOnInit() {
     let bannersInDatabase;
     this.articleService.getArticles().subscribe(dataLastEmittedFromObserver => {
-      bannersInDatabase = dataLastEmittedFromObserver;  
+      bannersInDatabase = dataLastEmittedFromObserver;
+      bannersInDatabase.forEach(function(banner){
+        if(banner.tags === "banner"){
+console.log("yes");
+} else {
+  console.log("no")
+}
+
+      })
+
     });
 
   }
+
+
 }
