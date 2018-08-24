@@ -12,6 +12,7 @@ import { Location } from '@angular/common';
   providers: [ArticleService]
 })
 export class NewArticleComponent implements OnInit {
+  tags = [];
 
   constructor(private router: Router, private articleService: ArticleService, private route: ActivatedRoute, private location: Location) { }
 
@@ -19,9 +20,14 @@ export class NewArticleComponent implements OnInit {
   }
 
   addNewArticle(title: string, subtitle: string, author: string, image: string, bodyText: string, category: string, publishedDate: string) {
-  let newArticle = new Article(title, subtitle, author, image, bodyText, category, publishedDate);
+  let newArticle = new Article(title, subtitle, author, image, bodyText, category, publishedDate, this.tags);
   this.articleService.updateDatabase(newArticle);
+  this.tags = [];
   this.router.navigate(['admin']);
 }
+
+addTag(tag:string){
+  this.tags.push(tag);
+  }
 
 }
