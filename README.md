@@ -94,7 +94,7 @@ _Please email putman10@me.com with any questions._
 *_Angular_
 
 ##Base Screenshot for reference of The Huffington Post
-![The Huffington Post](src/assets/images/huffington-post-example.png "Huffington Post Reference")
+![The Huffington Post](angular-clone/src/assets/images/huffington-post-example.png "Huffington Post Reference")
 
 
 ### License

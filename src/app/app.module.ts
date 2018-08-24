@@ -15,6 +15,7 @@ import { AdminComponent } from './admin/admin.component';
 import { EditArticleComponent } from './edit-article/edit-article.component';
 import { NewArticleComponent } from './new-article/new-article.component';
 import { ArticleDetailsComponent } from './article-details/article-details.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -30,7 +31,8 @@ export const firebaseConfig = {
     AdminComponent,
     EditArticleComponent,
     NewArticleComponent,
-    ArticleDetailsComponent
+    ArticleDetailsComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
