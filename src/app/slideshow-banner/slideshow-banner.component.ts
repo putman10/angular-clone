@@ -22,7 +22,7 @@ export class SlideshowBannerComponent implements OnInit {
   showArrows: boolean = true;
   disableSwiping: boolean = false;
   autoPlay: boolean = true;
-  autoPlayInterval: number = 3333;
+  autoPlayInterval: number = 100000;
   stopAutoPlayOnSlide: boolean = true;
   debug: boolean = true;
   backgroundSize: string = 'cover';
@@ -48,7 +48,7 @@ export class SlideshowBannerComponent implements OnInit {
       for(let x = 0; x <= bannersInDatabase.length; x++){
         bannersInDatabase.forEach(function(banner){
           if(banner.tags[x] === "Banner" || banner.tags[x] === "banner"){
-            imageString.push({ url: banner.image, clickAction: () => alert('custom click function'), caption: banner.subtitle });
+            imageString.push({ url: banner.image, caption: banner.subtitle });
           } else {
           }
         });
@@ -57,5 +57,8 @@ export class SlideshowBannerComponent implements OnInit {
     this.imageUrls = imageString;
   }
 
+  viewBannerArticle(){
+    this.router.navigate(['admin'])
+  }
 
 }
