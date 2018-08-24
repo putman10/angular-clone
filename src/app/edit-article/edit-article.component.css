@@ -1,0 +1,16 @@
+.tagAdd {
+  margin-top: 10px;
+}
+
+.tagDelete {
+  margin-left: 10px;
+}
+
+.tags {
+    padding: 10px 15px;
+    background: #dedede;
+}
+
+label {
+  font-weight: 700;
+}

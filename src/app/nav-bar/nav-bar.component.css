@@ -1,6 +1,7 @@
 #header {
   background-color: black;
   text-align: center;
+  margin-bottom: 3rem;
 }
 
 #hamburger{
@@ -25,4 +26,8 @@
 
 .topLevel a{
   border-bottom: 3px solid #0DBE98;
+}
+
+img {
+    max-width: 100%;
 }
