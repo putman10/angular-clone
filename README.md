@@ -37,7 +37,6 @@
 * _Full CRUD functionality_
 
 
-
 ## Additional Functionality:
   * _Home page Slide show_
   * _Submission form for newsletter signup_
@@ -54,9 +53,6 @@
 * _Open project folder in terminal and run $ npm install _
 * _In terminal run $npm run start _
 
-# AngularClone
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
 
 ## Development server
 
@@ -77,6 +73,9 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 ## Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+## Deployed link
+[Firebase Online Site](https://huffington-post-clone.firebaseapp.com/).
 
 
 ## Known Bugs

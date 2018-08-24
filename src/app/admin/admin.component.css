@@ -65,3 +65,7 @@ margin-bottom: 0px;
 #all-articles .col-md-2{
     border-right: 1px dashed black;
 }
+
+.container{
+    margin-top: 6rem;
+}

@@ -24,8 +24,8 @@ img {
     font-weight: normal;
 }
 
-.middleArticles:first-of-type {
-  margin-top: 1.5rem ;
+.home {
+  margin-top: 3rem ;
 }
 
 .middleArticles {
@@ -34,4 +34,18 @@ img {
 
 .title {
   font-weight:700;
+}
+
+.categoryHeader {
+    background-image: url('/assets/images/pink-background.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.categoryHeader p{
+    margin-bottom: 0px;
 }
