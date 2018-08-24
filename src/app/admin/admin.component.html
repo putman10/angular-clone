@@ -1,19 +1,33 @@
 <div class="container">
   <div>
-    <button class="btn btn-primary" type="button" name="addNew" (click)="addNewArticle()">Add New Article</button>
+    <button class="btn light-green" type="button" name="addNew" id="addNew" (click)="addNewArticle()"><b>Add New Article</b></button>
+    <div class="row" id="admin-titles">
+      <div class="col-md-4">
+        <h2><b>Title</b></h2>
+      </div>
+      <div class="col-md-2">
+        <h2><b>Date Published</b></h2>
+      </div>
+      <div class="col-md-2">
+        <h2><b>Category</b></h2>
+      </div>
+      <div class="col-md-4">
+        <h2><b>Edit / Delete</b></h2>
+      </div>
+    </div>
     <div class="row" id="all-articles" *ngFor="let article of articles | async">
-      <div class="col-md-5">
+      <div class="col-md-4">
         <p><a routerLink="/articles/{{article.$key}}"><b>{{article.title}}</b></a></p>
       </div>
       <div class="col-md-2">
         <p>{{article.publishedDate}}</p>
       </div>
-      <div class="col-md-1">
+      <div class="col-md-2">
         <p><b>{{article.category}}</b></p>
       </div>
       <div class="col-md-4">
         <p>
-          <button (click)='editArticle(article)' type="button" id="editArticle" name="editArticle" class="btn btn-danger">Edit Article</button>
+          <button (click)='editArticle(article)' type="button" id="editArticle" name="editArticle" class="btn btn-primary">Edit Article</button>
           <button type="button" name="deleteButton" (click)="deleteArticle(article)" class="btn btn-danger">Delete Article</button>
         </p>
       </div>

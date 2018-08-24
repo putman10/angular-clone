@@ -21,3 +21,47 @@
 #all-articles #editArticle {
   margin-right: 10px;
 }
+
+#addNew {
+  margin: 10px 0;
+  width: 100%;
+}
+
+a {
+  color:#0DBE98;
+}
+
+.light-green {
+    color: #fff;
+    background-color: #0DBE98;
+    border-color: #0d9678;
+}
+
+.light-green:hover {
+    color: #fff;
+    background-color: #0d9678;
+    border-color: #0a9073;
+}
+
+#admin-titles {
+    text-align: center;
+    background: black;
+    color: white;
+    text-transform: uppercase;
+    padding: 15px 10px;
+}
+
+#admin-titles h2{
+font-size: 16px;
+margin-bottom: 0px;
+}
+
+#admin-titles .col-md-4:first-of-type,
+#admin-titles .col-md-2{
+    border-right: 1px dashed white;
+}
+
+#all-articles .col-md-4:first-of-type,
+#all-articles .col-md-2{
+    border-right: 1px dashed black;
+}
