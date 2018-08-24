@@ -10,3 +10,19 @@
 #header .row {
     padding: 15px;
 }
+
+#navbar {
+  background-color: #252525;
+  padding: 3rem 20px;
+  text-align: left;
+  border-bottom: 3px solid #0DBE98;
+}
+
+#navbar a{
+  color: white;
+  text-decoration: none;
+}
+
+.topLevel a{
+  border-bottom: 3px solid #0DBE98;
+}
