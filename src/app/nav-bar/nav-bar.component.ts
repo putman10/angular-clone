@@ -9,6 +9,17 @@ export class NavBarComponent implements OnInit {
 
   constructor() { }
 
+  menuToggleState = 0;
+
+  toggleMenu(){
+    if(this.menuToggleState == 0){
+      this.menuToggleState ++;
+    } else {
+      this.menuToggleState --;
+    }
+
+  }
+
   ngOnInit() {
   }
 

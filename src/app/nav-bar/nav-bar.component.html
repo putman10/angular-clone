@@ -1,20 +1,19 @@
 <div id="header">
-  <div class="container" >
     <div class="row">
       <div class="col-md-2">
-        <div class="navbar">
-          <ul>
-            <li><a routerLink="">Home</a></li>
-            <li><a routerLink="admin">Admin  Section</a></li>
-          </ul>
-        </div>
+        <img (click)="toggleMenu()" id="hamburger" src="/assets/images/Hamburger_icon.png" alt="logo">
       </div>
       <div class="col-md-8">
         <img src="/assets/images/huffington-post-logo.png" alt="logo">
       </div>
       <div class="col-md-2">
-<p>social media icons</p>
+        <p>social media icons</p>
       </div>
     </div>
-  </div>
+    <div *ngIf="menuToggleState === 1" id="navbar">
+      <ul>
+        <li><a routerLink="">Home</a></li>
+        <li><a routerLink="admin">Admin  Section</a></li>
+      </ul>
+    </div>
 </div>
