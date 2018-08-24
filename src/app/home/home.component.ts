@@ -5,6 +5,8 @@ import { Router } from '@angular/router';
 import { FirebaseListObservable } from 'angularfire2/database';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
+import { UniquePipe } from '../unique.pipe';
+import { Limit2Pipe } from '../limit2.pipe';
 
 @Component({
   selector: 'app-home',
