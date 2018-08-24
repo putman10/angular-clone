@@ -11,7 +11,7 @@ import { Location } from '@angular/common';
 export class SlideshowBannerComponent implements OnInit {
 
   imageUrls = [
-    { url: 'https://cdn.vox-cdn.com/uploads/chorus_asset/file/9278671/jbareham_170917_2000_0124.jpg', clickAction: () => routerLink="admin", caption: 'Test Caption' }
+    { url: 'https://cdn.vox-cdn.com/uploads/chorus_asset/file/9278671/jbareham_170917_2000_0124.jpg', clickAction: () => goToArticle(), caption: 'Test Caption' }
   ];
   height: string = '400px';
   minHeight: string;
@@ -36,6 +36,10 @@ export class SlideshowBannerComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  goToArticle(){
+    console.log("hello")
   }
 
 }
