@@ -20,6 +20,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { SlideshowBannerComponent } from './slideshow-banner/slideshow-banner.component';
 import { Limit2Pipe } from './limit2.pipe';
 import { UniquePipe } from './unique.pipe';
+import { TopStoriesPipe } from './topstories.pipe';
 import { CategoryComponent } from './category/category.component';
 
 export const firebaseConfig = {
@@ -41,6 +42,7 @@ export const firebaseConfig = {
     SlideshowBannerComponent,
     Limit2Pipe,
     UniquePipe,
+    TopStoriesPipe,
     CategoryComponent
   ],
   imports: [

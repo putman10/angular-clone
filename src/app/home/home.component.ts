@@ -7,6 +7,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { UniquePipe } from '../unique.pipe';
 import { Limit2Pipe } from '../limit2.pipe';
+import { TopStoriesPipe } from '../topstories.pipe';
 
 @Component({
   selector: 'app-home',

@@ -20,8 +20,9 @@
           </ul>
         </div>
         <div class="col-md-6">
+          <div class="categoryHeader">Categories</div>
           <div *ngFor="let article of articles | async | unique">
-            <p class="categoryClick" (click)="goToCategory(article.category); toggleMenu()">
+            <p class="categoryClick topLevel" (click)="goToCategory(article.category); toggleMenu()">
               {{article.category}}
           </p>
           </div>

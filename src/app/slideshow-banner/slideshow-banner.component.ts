@@ -22,7 +22,7 @@ export class SlideshowBannerComponent implements OnInit {
   showArrows: boolean = true;
   disableSwiping: boolean = false;
   autoPlay: boolean = true;
-  autoPlayInterval: number = 6000;
+  autoPlayInterval: number = 8000;
   stopAutoPlayOnSlide: boolean = true;
   debug: boolean = true;
   backgroundSize: string = 'cover';

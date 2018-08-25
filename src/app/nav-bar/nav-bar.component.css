@@ -26,7 +26,20 @@
   color: white;
   text-decoration: none;
 }
-
+.topLevel {
+  margin-bottom: 10px;
+}
+.categoryHeader{
+    background-image: url(/assets/images/pink-background.png);
+    background-position: left;
+    background-repeat: no-repeat;
+    text-align: left;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 15px;
+    margin-left: -32px;
+padding-left: 30px;
+}
 .topLevel a{
   border-bottom: 3px solid #0DBE98;
 }
@@ -37,4 +50,8 @@ img {
 
 .categoryClick{
   color:white;
+}
+
+.categoryClick:hover{
+  color:#0DBE98;
 }
