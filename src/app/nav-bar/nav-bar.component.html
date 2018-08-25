@@ -20,10 +20,11 @@
           </ul>
         </div>
         <div class="col-md-6">
-          <ul>
-            <li class="topLevel"><a routerLink="">Home</a></li>
-            <li class="topLevel"><a routerLink="admin">Admin  Section</a></li>
-          </ul>
+          <div *ngFor="let article of articles | async | unique">
+            <p class="categoryClick" (click)="goToCategory(article.category); toggleMenu()">
+              {{article.category}}
+          </p>
+          </div>
         </div>
       </div>
     </div>

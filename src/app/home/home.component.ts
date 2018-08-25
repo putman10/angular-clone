@@ -28,7 +28,8 @@ export class HomeComponent implements OnInit {
   }
 
   goToCategory(selectedCategory){
-    this.router.navigate(['categories', selectedCategory])
+    let lowercaseSelCategory = selectedCategory.toLowerCase();
+    this.router.navigate(['categories', lowercaseSelCategory]);
   }
 
 }
