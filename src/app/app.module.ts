@@ -20,6 +20,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { SlideshowBannerComponent } from './slideshow-banner/slideshow-banner.component';
 import { Limit2Pipe } from './limit2.pipe';
 import { UniquePipe } from './unique.pipe';
+import { CategoryComponent } from './category/category.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -39,7 +40,8 @@ export const firebaseConfig = {
     NavBarComponent,
     SlideshowBannerComponent,
     Limit2Pipe,
-    UniquePipe
+    UniquePipe,
+    CategoryComponent
   ],
   imports: [
     BrowserModule,

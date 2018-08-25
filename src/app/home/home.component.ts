@@ -27,4 +27,8 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['articles', currentArticle.$key])
   }
 
+  goToCategory(selectedCategory){
+    this.router.navigate(['categories', selectedCategory])
+  }
+
 }

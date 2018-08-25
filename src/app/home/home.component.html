@@ -6,7 +6,7 @@
         <p>TOP STORIES</p>
       </div>
       <div class="row">
-        <div class="col-md-12 middleArticles" *ngFor="let article of articles | async | Limit2Pipe">
+        <div class="col-md-12 middleArticles" *ngFor="let article of articles | async">
           <div (click)="viewArticle(article)">
             <p><img src="{{article.image}}" alt="{{article.title}}"></p>
             <h5 class="title">{{article.title}}</h5>
@@ -31,7 +31,7 @@
         <p>CATEGORIES</p>
       </div>
       <div class="col-md-12 middleArticles" *ngFor="let article of articles | async | unique">
-        <div>
+        <div class="categoryClick" (click)="goToCategory(article.category)">
           {{article.category}}
         </div>
       </div>
