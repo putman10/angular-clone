@@ -10,8 +10,9 @@ import * as _ from 'lodash';
 
 export class CategoryPipe implements PipeTransform {
   transform(input: Article[], category: string){
-let properCaseCategory = category.charAt(0).toUpperCase() + category.slice(1));
     let filteredArray = [];
+    let properCaseCategory = category.charAt(0).toUpperCase() + category.slice(1);
+
       input.forEach(function(element){
           if(element.category == properCaseCategory){
             filteredArray.push(element);
