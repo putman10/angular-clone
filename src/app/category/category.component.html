@@ -1,3 +1,11 @@
-<p>
-  category works!
-</p>
+<div class="container top">
+  <div *ngFor="let article of allArticlesObject | CategoryPipe:category">
+    <p><b>{{article.category}}</b></p>
+    <p>{{article.publishedDate}}</p>
+    <h3>{{article.title}}</h3>
+    <h5><em>{{article.subtitle}}</em></h5>
+    <p><em>by {{article.author}}</em></p>
+    <p><img src="{{article.image}}" alt="{{article.title}}"></p>
+    <p [innerHTML]="article.bodyText"></p>
+    </div>
+  </div>
